@@ -1,0 +1,21 @@
+{
+  "lerna": "2.2.0",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "version": "1.1.2",
+  "packages": [
+    "packages/*",
+    "dev-pacakges/*",
+    "plugins/*"
+  ],
+  "command": {
+    "run": {
+      "stream": true
+    },
+    "publish": {
+      "forcePublish": true,
+      "skipGit": true,
+      "registry": "https://registry.npmjs.org/"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "name": "lbxdrugs-cli",
+  "version": "1.1.2",
+  "description": "Lbxdrugs CLI.",
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "eslintIgnore": [
+    "templates"
+  ],
+  "files": [
+    "bin",
+    "lib",
+    "src",
+    "templates"
+  ],
+  "bin": {
+    "lbxdrugs": "./bin/lbxdrugs"
+  },
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "start:windows": "nodemon --watch 'src/**/*.ts' --exec \"npx ts-node\" src/index.ts",
+    "create": "npm run build && npm run start",
+    "build": "tsc -p .",
+    "refresh": "rm -rf ./node_modules ./package-lock.json && npm install"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "clear": "^0.1.0",
+    "commander": "^9.2.0",
+    "figlet": "^1.5.2",
+    "fs-extra": "^10.1.0",
+    "js-yaml": "^4.1.0",
+    "minimist": "^1.2.6",
+    "minio": "^7.0.28",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@types/clear": "^0.1.2",
+    "@types/figlet": "^1.5.4",
+    "@types/fs-extra": "^9.0.13",
+    "@types/js-yaml": "^4.0.5",
+    "@types/minimist": "^1.2.2",
+    "@types/minio": "^7.0.13",
+    "@types/node": "^17.0.31",
+    "@types/watchpack": "^1.1.7",
+    "nodemon": "^2.0.16",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4",
+    "watchpack": "^2.3.1"
+  },
+  "gitHead": "94533be848e4e7f4d315b94488195b95ce45d143"
+}

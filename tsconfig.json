@@ -1,0 +1,22 @@
+{
+  "extends": "./configs/base.tsconfig",
+  "compilerOptions": {
+    "allowJs": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "@lbxdrugs/cli/lib/*": [
+        "dev-packages/cli/src/*"
+      ],
+      "lbxdrugs-cli/lib/*": [
+        "dev-packages/cli/src/*"
+      ]
+    }
+  },
+  "include": [
+    "dev-packages/*/src",
+    "packages/*/src",
+    "examples/*/test",
+    "plugins/*/src"
+  ]
+}
